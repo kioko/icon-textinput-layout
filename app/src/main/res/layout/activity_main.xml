@@ -1,19 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/nairobi"
     tools:context="com.thomaskioko.icontextinputlayout.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="@+id/activity_main"
-        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
-        app:layout_constraintRight_toRightOf="@+id/activity_main"
-        app:layout_constraintTop_toTopOf="@+id/activity_main" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/grey"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context="com.thomaskioko.icontextinputlayout.MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Icon TextInput Layout"
+            android:textColor="@android:color/white"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <com.thomaskioko.icontextinputlayout.ui.view.FloatLabelLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:floatLabelTextAppearance="@style/TextAppearance.IconTextInputLayout.FloatLabel">
+
+            <EditText
+                android:id="@+id/editTextUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/ic_account_circle_white_18dp"
+                android:drawableStart="@mipmap/ic_account_circle_white_18dp"
+                android:hint="@string/hint_username"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/editTextAccountNumber"
+                android:textColor="@drawable/float_label" />
+
+        </com.thomaskioko.icontextinputlayout.ui.view.FloatLabelLayout>
+
+        <com.thomaskioko.icontextinputlayout.ui.view.FloatLabelLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:floatLabelPaddingLeft="10dp"
+            app:floatLabelTextAppearance="@style/TextAppearance.IconTextInputLayout.FloatLabel">
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/ic_lock_white_18dp"
+                android:drawableStart="@mipmap/ic_lock_white_18dp"
+                android:hint="@string/hint_password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/edit_password"
+                android:textColor="@drawable/float_label"  />
+
+        </com.thomaskioko.icontextinputlayout.ui.view.FloatLabelLayout>
+
+        <Button
+            android:id="@+id/btnAddPayBill"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button"
+            android:drawableEnd="@mipmap/ic_send_white_24dp"
+            android:drawableRight="@mipmap/ic_send_white_24dp"
+            android:text="@string/button_log_in"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</RelativeLayout>

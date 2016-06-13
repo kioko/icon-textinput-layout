@@ -1,6 +1,7 @@
 Icon TextInput Layout
 ----------------------
-This is a simple tutorial that demonstrates how to add and icon to TextInputLayout.
+This is a simple tutorial that demonstrates how to add an icon to TextInputLayout using a custom 
+class. This gives us more flexibility in customising the view.
 
 ### Final Result
 <p align="center">
